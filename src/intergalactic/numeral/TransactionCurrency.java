@@ -7,14 +7,14 @@ import intergalactic.unit.CurrencyUnit;
 public class TransactionCurrency {
 	
 	
-	private HashMap<String, CurrencyUnit> intergalacticCurrency=new HashMap<String, CurrencyUnit>();
+	private HashMap<String, CurrencyUnit> currencies = new HashMap<String, CurrencyUnit>();
 	
 
 	public CurrencyUnit getCurrency(String key){
-		return intergalacticCurrency.get(key);
+		return currencies.get(key);
 	}
 	public boolean isCurrency(String key){
-		return intergalacticCurrency.containsKey(key);
+		return currencies.containsKey(key);
 	}
 		
 	
@@ -22,7 +22,7 @@ public class TransactionCurrency {
 	
 	public void setCurrency(String valueOfIntergalacticCurrency, double intergalacticValue){
 		CurrencyUnit unit= new CurrencyUnit(valueOfIntergalacticCurrency,intergalacticValue);
-		intergalacticCurrency.put(unit.getIntergalacticalTransactionUnit(), unit);
+		currencies.put(unit.getIntergalacticalTransactionUnit(), unit);
 			
 	}
 }
